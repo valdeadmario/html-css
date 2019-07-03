@@ -1,18 +1,31 @@
 * {
   box-sizing: border-box;
 }
-
-li {
-  list-style-type: none;
-  /* Убираем маркеры */
+body {
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-ul {
-  margin-left: 0;
-  /* Отступ слева в браузере IE и Opera */
-  padding-left: 0;
-  /* Отступ слева в браузере Firefox, Safari, Chrome */
+a {
+  text-decoration: none;
+  color: black;
 }
-ul {
-  list-style-type: none;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
 }
