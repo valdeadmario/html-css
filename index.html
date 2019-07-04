@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="reset.css" />
+    <meta name="description" content="Natural is everything!">
+    <link rel="stylesheet" href="css/reset.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -13,27 +14,38 @@
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="icon.css" />
-    <link rel="stylesheet" href="global.css" />
-    <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="aside.css" />
-    <link rel="stylesheet" href="footer.css" />
-    <title>Html/css</title>
+    <link rel="stylesheet" href="css/icon.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/blocks/header.css" />
+    <link rel="stylesheet" href="css/blocks/menu.css" />
+    <link rel="stylesheet" href="css/blocks/main.css" />
+    <link rel="stylesheet" href="css/blocks/aside.css" />
+    <link rel="stylesheet" href="css/blocks/footer.css" />
+    <link rel="stylesheet" href="css/blocks/author.css" />
+    <link rel="stylesheet" href="css/blocks/cards.css" />
+    <link rel="stylesheet" href="css/blocks/comment.css" />
+    <link rel="stylesheet" href="css/blocks/contacts.css" />
+    <link rel="stylesheet" href="css/blocks/search.css" />
+    <link rel="stylesheet" href="css/blocks/subscribe.css" />
+    <link rel="stylesheet" href="css/blocks/tags.css" />
+    <link rel="stylesheet" href="css/blocks/contacts.css" />
+    <title>Summer</title>
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <img class="logo" src="image/logo.png" />
+        <a href="#" class="logo">
+          <img src="image/logo.png" />
+        </a>
         <nav class="navigation">
-          <div id="menuToggle">
+          <div class="menu-toggle">
             <input type="checkbox" />
 
             <span></span>
             <span></span>
             <span></span>
 
-            <ul id="menu" class="menu">
+            <ul class="menu">
               <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
               <li class="menu-item"><a href="#" class="menu-link">About</a></li>
               <li class="menu-item">
@@ -59,7 +71,7 @@
         </nav>
       </div>
     </header>
-    <div class="wrapper">
+    <div class="wrapper container">
       <main class="main">
         <div class="container">
           <ul class="card-list">
@@ -179,7 +191,7 @@
       <aside class="aside">
         <section class="author">
           <img class="avatar" src="image/author.jpg" />
-          <h3 class="name">Vladimir Mishura</h3>
+          <h3 class="title">Vladimir Mishura</h3>
           <p class="descr">Natural man who loves the forest</p>
         </section>
         <ul class="social">
@@ -198,8 +210,8 @@
         </ul>
         <form class="subscribe">
           <h3 class="title">Join Us</h3>
-          <input type="text" placeholder="Username" />
-          <input type="email" placeholder="Email" />
+          <input class="input" type="text" placeholder="Username" />
+          <input class="input" type="email" placeholder="Email" />
           <button class="btn">Subscribe</button>
         </form>
         <form class="search-form">
@@ -281,22 +293,30 @@
       </aside>
     </div>
     <footer class="footer">
-      <img class="logo" src="image/logo.png" />
-      <span class="copyright">&copy; Copyright 2019</span>
+      <a class="logo" href="#">
+        <img src="image/logo.png" />
+      </a>
+      <span class="copyright">&copy; Mishura Vladimir, 2019</span>
       <div class="contacts">
         <h3 class="title">Contacts</h3>
         <ul class="contacts-list">
           <li class="contact">
-            <span>0218327282</span>
-            <i class="fa fa-phone"></i>
+            <a href="https://t.me/loliso">
+              <span>loliso</span>
+              <i class="fa fa-telegram"></i>
+            </a>
           </li>
           <li class="contact">
-            <span>Kiev</span>
-            <i class="fa fa-map-marker"></i>
+            <a href="https://www.google.com.ua/maps/@50.4269761,30.5174295,13.32z?hl=ru">
+              <span>Kiev</span>
+              <i class="fa fa-map-marker"></i>
+            </a>
           </li>
           <li class="contact">
-            <span>reactbinary@gmail.com</span>
-            <i class="fa fa-envelope-open"></i>
+            <a href="mailto:vladimir.vstup@gmail.com">
+              <span>vladimir.vstup@gmail.com</span>
+              <i class="fa fa-envelope-open"></i>
+            </a>
           </li>
         </ul>
       </div>

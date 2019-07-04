@@ -8,9 +8,6 @@
     justify-content: center;
 }
 
-.tags li {
-}
-
 .tag {
     background: rgb(255, 224, 224);
     border-radius: 3px 0 0 3px;
@@ -55,4 +52,16 @@
 
 .tag:hover::after {
     border-left-color: crimson;
+}
+
+@media (max-width: 750px) {
+    .tags {
+        order: 5;
+    }
+    .tag::before {
+        background: #fff;
+    }
+    .tag::after {
+        background: #fff;
+    }
 }

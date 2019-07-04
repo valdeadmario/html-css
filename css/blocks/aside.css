@@ -1,0 +1,43 @@
+.aside {
+  background-color: #f3f3f3;
+  width: 350px;
+
+  align-self: start;
+  padding: 20px;
+}
+
+.aside .social {
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.aside input {
+  width: 100%;
+  padding: 10px 20px;
+
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  line-height: 1.25;
+  color: #55595c;
+  margin-bottom: 10px;
+}
+
+
+@media (max-width: 750px) {
+  .aside {
+    display: contents;
+  }
+  .wrapper {
+    flex-flow: column;
+  }
+
+  .social {
+    order: 2;
+  }
+}

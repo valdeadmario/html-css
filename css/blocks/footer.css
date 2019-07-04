@@ -19,39 +19,13 @@
   font-size: 15px;
 }
 
-.contacts {
-  text-align: right;
-}
-
-.contacts .title {
-  text-align: right;
-  border-bottom: solid 2px #fff;
-  padding: 5px;
-}
-
-.contacts .fa {
-  padding: 0 5px;
-  margin-left: 5px;
-}
-
-@media (max-width: 500px) {
+@media (max-width: 750px) {
   .footer {
     flex-flow: column;
   }
   .footer .logo {
     order: 1;
     margin-top: 30px;
-  }
-  .contacts {
-    order: 2;
-    text-align: center;
-    margin-top: 20px;
-    width: 60%;
-    align-self: center;
-  }
-
-  .contacts .title {
-    text-align: center;
   }
 
   .footer .copyright {

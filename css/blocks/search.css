@@ -1,0 +1,15 @@
+.search-form {
+    font-size: 13px;
+}
+
+.search-form input {
+    width: 65%;
+}
+.search-form .btn {
+    width: 34%;
+}
+@media (max-width: 750px) {
+    .search-form {
+        order: 4;
+    }
+}

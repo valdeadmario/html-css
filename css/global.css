@@ -10,6 +10,10 @@ a {
   color: black;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -21,12 +25,26 @@ a {
   padding: 20px;
 }
 
-img {
-  max-width: 100%;
-}
-
 .row {
   display: flex;
   justify-content: space-between;
 
+}
+
+.btn {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+
+  color: #fff;
+  background-color: #5cb85c;
+
+
+  border: 1px solid #5cb85c;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #449d44;
+  border-color: #419641;
 }

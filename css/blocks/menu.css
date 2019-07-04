@@ -1,0 +1,169 @@
+.menu-toggle {
+    align-self: center;
+
+    grid-column: 1/-1;
+    grid-row: 2;
+
+    font-size: 25px;
+}
+
+.menu-item a {
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding: 14px 20px;
+}
+
+.menu-item a::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    border-bottom: 3px solid #fff;
+    bottom: 0;
+    right: 300px;
+    transition: 0.7s all;
+}
+
+.menu-item a:hover::before {
+    right: 0;
+}
+
+.menu-toggle input {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .menu {
+        display: block;
+    }
+    .menu a {
+        color: #232323;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: relative;
+        top: 23px;
+        left: 50px;
+
+        z-index: 1;
+
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    .menu-toggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+
+        cursor: pointer;
+
+        opacity: 0; /* hide this */
+        z-index: 2; /* and place it over the hamburger */
+
+        -webkit-touch-callout: none;
+    }
+
+    /*
+         * Just a quick hamburger
+         */
+    .menu-toggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+
+        background: #eee;
+        border-radius: 3px;
+
+        z-index: 1;
+
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    }
+
+    .menu-toggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    .menu-toggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    /*
+         * Transform all the slices of hamburger
+         * into a crossmark.
+         */
+    .menu-toggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+    }
+
+    /*
+         * But let's hide the middle one.
+         */
+    .menu-toggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+         * Ohyeah and the last one should go the other direction
+         */
+    .menu-toggle input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+         * Make this absolute positioned
+         * at the top left of the screen
+         */
+    .menu {
+        position: fixed;
+        width: 300px;
+        height: 110vh;
+        margin: -100px 0 0 -50px;
+        padding: 50px;
+        padding-top: 125px;
+
+        background: #ededed;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+
+        /* to stop flickering of text in safari */
+
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    }
+
+    .menu li {
+        padding: 10px 0;
+        font-size: 22px;
+        border-bottom: solid 1px rgb(92, 184, 92);
+    }
+
+    /*
+         * And let's slide it in from the left
+         */
+    .menu-toggle input:checked ~ ul {
+        transform: none;
+    }
+
+    .menu-item a::before {
+        border-bottom: none;
+    }
+}
