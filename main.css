@@ -67,3 +67,9 @@
   color: #999999;
   text-decoration: none;
 }
+
+@media (max-width: 500px) {
+    .main {
+        order: 2;
+    }
+}

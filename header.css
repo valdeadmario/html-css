@@ -49,6 +49,7 @@
   height: 20px;
   padding: 5px;
   margin-top: 12px;
+  color: #fff;
 }
 
 .menu-item a {
@@ -99,6 +100,8 @@
     grid-column: 2;
     grid-row: 1;
     margin: 45px 40px 15px 45px;
+
+    color: #eee;
   }
 
   .logo {
@@ -108,6 +111,9 @@
 
   .menu {
     display: block;
+  }
+  .menu a {
+    color: #232323;
   }
 
   #menuToggle {
@@ -148,7 +154,7 @@
     margin-bottom: 5px;
     position: relative;
 
-    background: #232323;
+    background: #eee;
     border-radius: 3px;
 
     z-index: 1;
@@ -199,7 +205,7 @@
   #menu {
     position: absolute;
     width: 300px;
-    height: 102vh;
+    height: 500vh;
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
@@ -218,6 +224,7 @@
   #menu li {
     padding: 10px 0;
     font-size: 22px;
+    border-bottom: solid 1px rgb(92, 184, 92);
   }
 
   /*
